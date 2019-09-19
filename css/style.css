@@ -1,0 +1,38 @@
+.top-grid-img {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.top-grid-img img {
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: calc(100% / 3 - 2px);
+	width: -webkit-calc(100% / 3 - 2px);
+	height: 100%;
+	/*safari用高さ調整*/
+}
+
+.top-grid-img img:not(:nth-child(3n+1)) {
+	margin-left: 3px;
+}
+
+.top-grid-img img:nth-child(n+4) {
+	margin-top: 3px;
+}
+
+/*  以下はデモ確認のためのコード 削除してもOK
+------------------------*/
+
+body {
+	margin: auto;
+	width: 375px;
+}
+
+.top-grid-img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
